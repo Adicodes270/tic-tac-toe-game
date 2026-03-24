@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --bg-color-1: #0D1B2A;
+    --bg-color-2: #1B263B;
+    --bg-color-3: #fdfbfb;
+    --bg-color-4: #ebedee;
+    --dusk-blue: #415A77;
+    --slate: #475569;
+    --X: #FF2E63;
+    --O: #08D9D6;
+    --dusty-denim: #778DA9;
+    --text-color-light: #E0E1DD;
+    --text-color-dark : rgb(15, 15, 15);
+    --linear-gradient-dark: linear-gradient(135deg,
+            var(--bg-color-1),
+            var(--bg-color-2));
+    --linear-gradient-white: linear-gradient(120deg, var(--bg-color-3) 0%, var(--bg-color-4) 100%);
+    --toggle-button-dark : linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    --toggle-button-light: linear-gradient(to bottom right, #ffe259, #ffa751);
+    
+}
+
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color-light);
+    background: var(--linear-gradient-dark);
+    min-height: 100vh;
+    text-align: center;
+}
+
+body.light {
+    color: var(--text-color-dark);
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.container {
+    margin-top: 5rem;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+}
+
+.boxes {
+    height: 20vmin;
+    width: 20vmin;
+    border: none;
+    font-size: 4rem;
+    background-color: transparent;
+    color: var(--text-color-light); 
+    cursor: pointer;
+    
+
+    border-right: 2px solid var(--dusk-blue);
+    border-bottom: 2px solid var(--dusk-blue);
+}
+
+body.light .boxes{
+    color: var(--text-color-dark);
+    
+    border-right: 2px solid var(--slate);
+    border-bottom: 2px solid var(--slate);
+}
+
+
+.boxes:nth-child(3n) {
+    border-right: none;
+}
+
+
+.boxes:nth-child(n+7) {
+    border-bottom: none;
+}
+
+body.light .boxes:nth-child(3n) {
+    border-right: none;
+}
+
+
+body.light .boxes:nth-child(n+7) {
+    border-bottom: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+#reset{
+    height:70px; 
+    width:400px;
+
+    border: 2px solid var(--dusk-blue);
+    border-radius: 2rem;
+    margin: 2rem auto;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: transparent;
+    color: var(--text-color-light); 
+    font-family: 'Orbitron', 'sans-serif';
+}
+
+body.light #reset{
+    color: var(--text-color-dark);
+    border: 2px solid var(--slate);
+}
+
+.toggle-button {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    height: 95px;
+    width: 95px;
+    border: none;
+    background: var(--toggle-button-dark);
+    border-radius: 60%;
+}
+
+body.light .toggle-button {
+    background:  var(--toggle-button-light)
+}
+
+i {
+    font-size: 45px;
+    
+}
+
+body.light i {
+    color:white;
+}
+
+
+#new-game-btn {
+    height:70px; 
+    width:300px;
+
+    border: 2px solid var(--dusk-blue);
+    border-radius: 2rem;
+    margin: 2rem auto;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color: transparent;
+
+    font-family: 'Orbitron', 'sans-serif';
+}
+
+.msg-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+.msg-content-box {
+    background: var(--bg-color-2);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--dusk-blue);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    width: 90%;
+}
+
+body.light .msg-content-box {
+    background: var(--bg-color-3);
+    border-color: var(--slate);
+}
+
+.hide {
+    display: none !important;
+}
+.msg-container p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}

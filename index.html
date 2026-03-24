@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <main>
+        <div class="msg-container hide">
+            <div class="msg-content-box">
+                <p id="msg"></p>
+                <button id="new-game-btn">New Game</button>
+            </div>
+        </div>
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+            <div class="game">
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+                <button class="boxes"></button>
+
+            </div>
+        </div>
+        <button class="toggle-button" current-value="light"><i class="fa-solid fa-moon"></i></button>
+        <button id="reset">Reset Game</button>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
